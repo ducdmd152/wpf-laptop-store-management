@@ -67,7 +67,7 @@ namespace MyShopManagementGUI
 
         private void OnAutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
         {
-            if (e.PropertyName == "Id" || e.PropertyName == "Status" || e.PropertyName == "CategoryId")
+            if (e.PropertyName == "Id" || e.PropertyName == "Status" || e.PropertyName == "CategoryId" || e.PropertyName == "Image")
             {
                 e.Cancel = true;
             }           
