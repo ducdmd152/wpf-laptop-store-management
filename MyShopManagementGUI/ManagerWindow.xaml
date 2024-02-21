@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyShopManagementGUI"
         mc:Ignorable="d"
-        Title="ManagerWindow" Height="560" Width="820"
+        Title="ManagerWindow" Height="620" Width="820"
         WindowStyle="None"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
@@ -207,7 +207,7 @@
                                         </StackPanel>
                                     </StackPanel>
                                 </GroupBox>
-                                <GroupBox Header="Products" Margin="10,8,10,0" Height="203">
+                                <GroupBox Header="Products" Margin="10,8,10,0" MinHeight="240">
                                     <StackPanel
                                 Orientation="Vertical">
                                         <StackPanel Margin="8"
@@ -221,7 +221,7 @@
                                         <DataGrid x:Name="dgProducts"
                                               LoadingRow="OnLoadingRow"
                                               AutoGeneratingColumn="OnAutoGeneratingColumn"
-                                              d:ItemsSource="{d:SampleData ItemCount=5}" IsReadOnly="True" CanUserAddRows="False" MinHeight="160" 
+                                              d:ItemsSource="{d:SampleData ItemCount=5}" IsReadOnly="True" CanUserAddRows="False" MinHeight="200" 
                                               SelectionChanged="dgProducts_SelectionChanged">
                                             <DataGrid.Resources>
                                                 <Style TargetType="DataGridCell">

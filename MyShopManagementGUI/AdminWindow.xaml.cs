@@ -179,7 +179,6 @@ namespace MyShopManagementGUI
                 {
                     userService.Delete(getCurrentSelectedItemID());
                     LoadData();
-                    ResetInfoToEmpty();
                     MessageBox.Show("Delete the user successfully!", "Successfully", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }

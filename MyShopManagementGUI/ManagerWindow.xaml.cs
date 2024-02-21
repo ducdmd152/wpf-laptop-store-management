@@ -191,8 +191,7 @@ namespace MyShopManagementGUI
                 if (MessageBox.Show("Are you sure to delete?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
                 {
                     productService.Delete(getCurrentSelectedItemID());
-                    LoadData();
-                    ResetInfoToEmpty();
+                    LoadData();                    
                     MessageBox.Show("Delete the product successfully!", "Successfully", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }

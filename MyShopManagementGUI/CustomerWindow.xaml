@@ -6,7 +6,7 @@
 	xmlns:local="clr-namespace:MyShopManagementGUI"
         mc:Ignorable="d"
         Title="CustomerWindow"
-        Height="480" Width="820"
+        MinHeight="480" Width="820"
         WindowStyle="None"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
@@ -220,7 +220,7 @@
                                         <DataGrid x:Name="dgProducts"
                                               LoadingRow="OnLoadingRow"
                                               AutoGeneratingColumn="OnAutoGeneratingColumn"
-                                              d:ItemsSource="{d:SampleData ItemCount=5}" IsReadOnly="True" CanUserAddRows="False" MinHeight="100" 
+                                              d:ItemsSource="{d:SampleData ItemCount=5}" IsReadOnly="True" CanUserAddRows="False" MinHeight="160" 
                                               SelectionChanged="dgProducts_SelectionChanged">
                                             <DataGrid.Resources>
                                                 <Style TargetType="DataGridCell">
