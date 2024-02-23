@@ -76,7 +76,8 @@ namespace MyShopManagementGUI
                     btnAdd.IsEnabled = true;
                     btnUpdate.IsEnabled = false;
                     btnDelete.IsEnabled = false;
-                    dgUsers.SelectedIndex = -1;
+					txtEmail.IsReadOnly = false;
+					dgUsers.SelectedIndex = -1;
                     lbMode.Content = "Adding Mode";                    
                     lbMode.Background = new SolidColorBrush(Colors.LightGreen);
                     break;
@@ -84,7 +85,8 @@ namespace MyShopManagementGUI
                     btnAdd.IsEnabled = false;
                     btnUpdate.IsEnabled = true;
                     btnDelete.IsEnabled = true;
-                    lbMode.Background = new SolidColorBrush(Colors.LightBlue);
+					txtEmail.IsReadOnly = true;
+					lbMode.Background = new SolidColorBrush(Colors.LightBlue);
                     lbMode.Content = "Updating Mode";
                     break;
             }
@@ -215,7 +217,9 @@ namespace MyShopManagementGUI
                 throw new Exception("Email is required!");
             if (ValidateEmail(txtEmail.Text.Trim()) == false)
                 throw new Exception("Email is invalid format!");
-            if (txtName.Text.Trim().Length == 0)
+			if (userService.Exist(txtEmail.Text.Trim().ToLower()))
+				throw new Exception("Email already exist!");
+			if (txtName.Text.Trim().Length == 0)
                 throw new Exception("Name is required!");
             if (txtPassword.Password.Trim().Length == 0)
                 throw new Exception("Password is required & not allow for blank string!");
